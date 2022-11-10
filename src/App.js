@@ -13,7 +13,11 @@ function App() {
   // TODO: use useState to create a state variable to hold the state of the cart
   /* add your cart state code here */
   const [cart, setCart] = useState({});
-  setCart = (newItem, cost) => {
+  const [totalPrice, setTotalPrice] = useState(0);
+  const incrementTotalPrice = (addition) => {
+    totalPrice += addition;
+  }
+  const updateCart = (newItem, cost) => {
     // Increment if the item is already in the cart
     if (newItem in cart) {
       cart[newItem] += 1;
@@ -24,17 +28,13 @@ function App() {
     // Add the cost of the new item to the total cost
     incrementTotalPrice(cost)
   }
-  const [totalPrice, incrementTotalPrice] = useState(0);
-  incrementTotalPrice = (addition) => {
-    totalPrice += addition;
-  }
 
   return (
     <div className="App">
       <h1>Spenny D's Bakery</h1> {/* TODO: personalize your bakery (if you want) */}
 
       {bakeryData.map((item, index) => ( // TODO: map bakeryData to BakeryItem components
-        <BakerItem i={item} addToCart={setCart}/>
+        <BakerItem i={item} addToCart={updateCart}/>
       ))}
 
       <div>

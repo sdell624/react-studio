@@ -15,7 +15,7 @@ function App() {
   const [cart, setCart] = useState({});
   const [totalPrice, setTotalPrice] = useState(0);
   const incrementTotalPrice = (addition) => {
-    setTotalPrice(totalPrice + addition);
+    setTotalPrice((totalPrice + addition).toFixed(2));
   }
   const updateCart = (newItem, cost) => {
     const newCart = cart;

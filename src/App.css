@@ -2,6 +2,14 @@
 
 .App {
     background-color: azure;
+    display: flex;
+    justify-content: center;
+}
+
+.MenuWrapper {
+    display: flex;
+    max-width: 50%;
+    
 }
 
 .BakeryItem {

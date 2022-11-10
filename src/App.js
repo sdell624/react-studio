@@ -35,12 +35,12 @@ function App() {
   return (
     <div className="App">
       <h1>Spenny D's Bakery</h1> {/* TODO: personalize your bakery (if you want) */}
-
+      <div className="MenuWrapper">
       {bakeryData.map((item, index) => ( // TODO: map bakeryData to BakeryItem components
         <BakerItem i={item} addToCart={updateCart}/>
       ))}
-
-      <div>
+      </div>
+      <div className="Cart">
         <h2>Cart</h2>
         {/* TODO: render a list of items in the cart */}
         {print("Keys: " + Object.keys(cart))}

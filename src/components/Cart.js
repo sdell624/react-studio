@@ -8,7 +8,7 @@ function Cart(props) {
             {Object.keys(props.c).map((key) => {  
                 <p>{key}x {props.c[key]}</p>
             })}
-            <p>Total Price: ${c.p}</p>
+            <p>Total Price: ${props.p}</p>
         </div>
     )
 }

@@ -2,20 +2,18 @@
 
 .App {
     background-color: azure;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
 }
 
 .MenuWrapper {
     display: flex;
     max-width: 50%;
-    
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .BakeryItem {
-  display: flex;
-  max-width: 30%;
   justify-content: center;
   margin: 2rem;
-  flex-wrap: wrap;
 }

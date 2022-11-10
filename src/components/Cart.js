@@ -5,7 +5,8 @@ function Cart(props) {
             <h2>Cart</h2>
             {/* TODO: render a list of items in the cart */}
             {console.log("Keys: " + Object.keys(props.c))}
-            {Object.keys(props.c).map((key) => {  
+            {Object.keys(props.c).map((key) => {
+                console.log("There are " + props.c[key] + " of " + key);
                 <p>{key}x {props.c[key]}</p>
             })}
             <p>Total Price: ${props.p}</p>

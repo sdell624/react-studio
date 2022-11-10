@@ -40,8 +40,8 @@ function App() {
       <div>
         <h2>Cart</h2>
         {/* TODO: render a list of items in the cart */}
-        {cart.map((elt) => {  
-          <p>{elt.value}x {elt.key}</p>
+        {Object.keys(cart).map((key) => {  
+          <p>{key}x {cart[key]}</p>
         })}
         <p>Total Price: ${totalPrice}</p>
       </div>

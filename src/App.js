@@ -26,9 +26,10 @@ function App() {
     } else {
       newCart[newItem] = 1;
     }
-    setCart(newCart)
+    print("newCart: " + newCart);
+    setCart(newCart);
     // Add the cost of the new item to the total cost
-    incrementTotalPrice(cost)
+    incrementTotalPrice(cost);
   }
 
   return (
@@ -42,6 +43,7 @@ function App() {
       <div>
         <h2>Cart</h2>
         {/* TODO: render a list of items in the cart */}
+        {print("Keys: " + Object.keys(cart))}
         {Object.keys(cart).map((key) => {  
           <p>{key}x {cart[key]}</p>
         })}

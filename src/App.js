@@ -42,7 +42,7 @@ function App() {
         <BakerItem i={item} addToCart={updateCart}/>
       ))}
       </div>
-      <Cart/>
+      <Cart c={cart} p={totalPrice}/>
     </div>
   );
 }

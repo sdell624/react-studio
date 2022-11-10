@@ -4,11 +4,11 @@ function Cart(props) {
 
             <h2>Cart</h2>
             {/* TODO: render a list of items in the cart */}
-            {console.log("Keys: " + Object.keys(cart))}
-            {Object.keys(cart).map((key) => {  
-                <p>{key}x {cart[key]}</p>
+            {console.log("Keys: " + Object.keys(props.c))}
+            {Object.keys(props.c).map((key) => {  
+                <p>{key}x {props.c[key]}</p>
             })}
-            <p>Total Price: ${totalPrice}</p>
+            <p>Total Price: ${c.p}</p>
         </div>
     )
 }

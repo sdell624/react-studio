@@ -7,7 +7,9 @@ function Cart(props) {
             {console.log("Keys: " + Object.keys(props.c))}
             {Object.keys(props.c).map((key) => {
                 console.log("There are " + props.c[key] + " of " + key);
-                <p>{key}x {props.c[key]}</p>
+                <p>chimp mode</p>
+                // <p>{key}x {props.c[key]}</p>
+                
             })}
             <p>Total Price: ${props.p}</p>
         </div>

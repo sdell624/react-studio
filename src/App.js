@@ -15,16 +15,18 @@ function App() {
   const [cart, setCart] = useState({});
   const [totalPrice, setTotalPrice] = useState(0);
   const incrementTotalPrice = (addition) => {
-    totalPrice += addition;
+    setTotalPrice(totalPrice + addition);
   }
   const updateCart = (newItem, cost) => {
+    const newCart = cart;
     // Increment if the item is already in the cart
-    if (newItem in cart) {
-      cart[newItem] += 1;
+    if (newItem in newCart) {
+      newCart[newItem] += 1;
     // Otherwise add item to cart at quantity 1
     } else {
-      cart[newItem] = 1;
+      newCart[newItem] = 1;
     }
+    setCart(newCart)
     // Add the cost of the new item to the total cost
     incrementTotalPrice(cost)
   }

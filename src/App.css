@@ -1,9 +1,11 @@
 /* Add styling for your page here */
 
+
 .App {
-    background-color: azure;
+    /* background-color: azure; */
     /* display: flex; */
     justify-content: center;
+    margin: 2rem;
 }
 
 .MenuWrapper {

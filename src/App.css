@@ -26,7 +26,10 @@ img {
 }
 
 .BakerItem {
-  text-align: center;
-  margin: 2rem;
-  max-width: 500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px;
+    max-width: 450px;
 }

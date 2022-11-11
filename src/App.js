@@ -43,9 +43,9 @@ function App() {
   return (
     <div className="App">
 
-      {test.map((val, i) => {
+      {/* {test.map((val, i) => {
         <p key={i}>{val}</p>
-      })}
+      })} */}
 
       <h1>Spenny D's Bakery</h1> {/* TODO: personalize your bakery (if you want) */}
       <div className="MenuWrapper">

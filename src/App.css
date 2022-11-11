@@ -21,7 +21,7 @@ img {
 }
 
 .BakerItem {
-  justify-content: center;
+  text-align: center;
   margin: 2rem;
   max-width: 30%;
 }

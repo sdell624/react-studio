@@ -37,8 +37,16 @@ function App() {
     incrementTotalPrice(cost);
   }
 
+  const [test, setTest] = useState([]);
+  setTest([1,2,3]);
+
   return (
     <div className="App">
+
+      {test.map((val, i) => {
+        <p key={i}>{val}</p>
+      })}
+
       <h1>Spenny D's Bakery</h1> {/* TODO: personalize your bakery (if you want) */}
       <div className="MenuWrapper">
         {bakeryData.map((item, index) => ( // TODO: map bakeryData to BakeryItem components

@@ -25,11 +25,11 @@ img {
     flex-direction: row;
 }
 
-.BakerItem {
-    display: flex;
+.BakeryItem {
+    /* display: flex;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: column; */
     text-align: center;
     margin: 20px;
-    max-width: 450px;
+    max-width: 40px;
 }

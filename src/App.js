@@ -42,7 +42,7 @@ function App() {
       <div className="content">
         <div className="MenuWrapper">
           {bakeryData.map((item, index) => ( // TODO: map bakeryData to BakeryItem components
-            <BakerItem i={item} addToCart={updateCart}/>
+            <BakerItem className="BakeryItem" i={item} addToCart={updateCart}/>
           ))}
         </div>
         <div className="Cart">

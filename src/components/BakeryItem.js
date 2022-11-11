@@ -1,7 +1,7 @@
 // TODO: create a component that displays a single bakery item
 function BakerItem(props) {
     return (
-        <div>
+        <div className="BakeryItem">
             <img src={props.i.image}/>
             <h2>{props.i.name}</h2>
             <p>{props.i.description}</p>

@@ -37,8 +37,8 @@ function App() {
     incrementTotalPrice(cost);
   }
 
-  const [test, setTest] = useState([]);
-  setTest([1,2,3]);
+  // const [test, setTest] = useState([]);
+  // setTest([1,2,3]);
 
   return (
     <div className="App">

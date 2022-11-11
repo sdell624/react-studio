@@ -43,9 +43,9 @@ function App() {
   return (
     <div className="App">
 
-      {test.map((val, i) => {
+      {test.map((val, i) => (
         <Para x={val}/>
-      })}
+      ))}
 
       <h1>Spenny D's Bakery</h1> {/* TODO: personalize your bakery (if you want) */}
       <div className="MenuWrapper">
@@ -55,10 +55,10 @@ function App() {
       </div>
       {/* <Cart k={cartKeys} c={cart} p={totalPrice}/> */}
       <ul>
-        {Object.keys(cart).map((k, i) => {
+        {Object.keys(cart).map((k, i) => (
           console.log("mapping");
           <li key={i}>{cart[k]}x {k}</li>
-        })}
+        ))}
       </ul>
       <p>Total Price: ${totalPrice}</p>
     </div>

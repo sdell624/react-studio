@@ -14,14 +14,14 @@ function App() {
   // TODO: use useState to create a state variable to hold the state of the cart
   /* add your cart state code here */
   const [cart, setCart] = useState({});
-  const [cartKeys, setCartKeys] = useState([])
+  // const [cartKeys, setCartKeys] = useState([])
   const [totalPrice, setTotalPrice] = useState(0);
   const incrementTotalPrice = (addition) => {
     // let newTotal = totalPrice + addition
     setTotalPrice(totalPrice + addition);
   }
   const updateCart = (newItem, cost) => { 
-    let newCart = cart;
+    let newCart = {...cart};
     // Increment if the item is already in the cart
     if (newItem in newCart) {
       newCart[newItem] += 1;
@@ -32,7 +32,7 @@ function App() {
     console.log("Item: " + newItem + " Quant: " + newCart[newItem]);
     setCart(newCart);
     // Update keys to trigger react
-    setCartKeys(Object.keys(newCart));
+    // setCartKeys(Object.keys(newCart));
     // Add the cost of the new item to the total cost
     incrementTotalPrice(cost);
   }
@@ -47,7 +47,7 @@ function App() {
       </div>
       {/* <Cart k={cartKeys} c={cart} p={totalPrice}/> */}
       <ul>
-      {cartKeys.map((key) => {
+      {Object.keys(cart).map((key) => {
         <li>{cart[key]}x {key}</li>
       })}
       </ul>

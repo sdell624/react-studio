@@ -19,13 +19,14 @@ img {
 
 .MenuWrapper {
     display: flex;
-    max-width: 2%;
+    max-width: 1000px;
     justify-content: center;
     flex-wrap: wrap;
+    flex-direction: row;
 }
 
 .BakerItem {
   text-align: center;
   margin: 2rem;
-  max-width: 30%;
+  max-width: 500px;
 }

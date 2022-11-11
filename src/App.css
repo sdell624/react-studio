@@ -10,6 +10,7 @@
 
 .content {
     display: flex;
+    margin: auto;
 }
 
 img {
@@ -30,6 +31,6 @@ img {
     justify-content: center;
     flex-direction: column; */
     text-align: center;
-    margin: 20px;
+    margin: 450px;
     max-width: 40px;
 }

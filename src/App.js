@@ -3,6 +3,7 @@ import { useState } from "react";
 import bakeryData from "./assets/bakery-data.json";
 import BakerItem from "./components/BakeryItem";
 import Cart from "./components/Cart";
+import Para from "./components/Para";
 
 /* ####### DO NOT TOUCH -- this makes the image URLs work ####### */
 bakeryData.forEach((item) => {
@@ -43,7 +44,7 @@ function App() {
     <div className="App">
 
       {test.map((val, i) => {
-        <p key={i}>{val}</p>
+        <Para x={val}/>
       })}
 
       <h1>Spenny D's Bakery</h1> {/* TODO: personalize your bakery (if you want) */}

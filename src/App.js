@@ -21,7 +21,7 @@ function App() {
     setTotalPrice(totalPrice + addition);
   }
   const updateCart = (newItem, cost) => { 
-    const newCart = cart;
+    let newCart = cart;
     // Increment if the item is already in the cart
     if (newItem in newCart) {
       newCart[newItem] += 1;
@@ -29,7 +29,7 @@ function App() {
     } else {
       newCart[newItem] = 1;
     }
-    console.log("newCart: " + newCart);
+    console.log("Item: " + newItem + " Quant: " + newCart[newItem]);
     setCart(newCart);
     // Update keys to trigger react
     setCartKeys(Object.keys(newCart));

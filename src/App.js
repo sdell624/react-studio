@@ -41,15 +41,16 @@ function App() {
     <div className="App">
       <h1>Spenny D's Bakery</h1> {/* TODO: personalize your bakery (if you want) */}
       <div className="MenuWrapper">
-      {bakeryData.map((item, index) => ( // TODO: map bakeryData to BakeryItem components
-        <BakerItem i={item} addToCart={updateCart}/>
-      ))}
+        {bakeryData.map((item, index) => ( // TODO: map bakeryData to BakeryItem components
+          <BakerItem i={item} addToCart={updateCart}/>
+        ))}
       </div>
       {/* <Cart k={cartKeys} c={cart} p={totalPrice}/> */}
       <ul>
-      {Object.keys(cart).map((key) => {
-        <li>{cart[key]}x {key}</li>
-      })}
+        {Object.keys(cart).map((key) => {
+          console.log("mapping");
+          <li>{cart[key]}x {key}</li>
+        })}
       </ul>
       <p>Total Price: ${totalPrice}</p>
     </div>

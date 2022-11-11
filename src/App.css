@@ -20,8 +20,8 @@ img {
     flex-wrap: wrap;
 }
 
-.BakeryItem {
+.BakerItem {
   justify-content: center;
   margin: 2rem;
-  max-width: 200px;
+  max-width: 30%;
 }

@@ -8,6 +8,11 @@
     margin: 2rem;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .MenuWrapper {
     display: flex;
     max-width: 50%;

@@ -14,6 +14,7 @@ function App() {
   // TODO: use useState to create a state variable to hold the state of the cart
   /* add your cart state code here */
   const [cart, setCart] = useState({});
+  const [cartKeys, setCartKeys] = useState()
   const [totalPrice, setTotalPrice] = useState(0);
   const incrementTotalPrice = (addition) => {
     // let newTotal = totalPrice + addition
@@ -30,6 +31,8 @@ function App() {
     }
     console.log("newCart: " + newCart);
     setCart(newCart);
+    // Update keys to trigger react
+    setCartKeys(Object.keys(newCart));
     // Add the cost of the new item to the total cost
     incrementTotalPrice(cost);
   }
@@ -42,7 +45,7 @@ function App() {
         <BakerItem i={item} addToCart={updateCart}/>
       ))}
       </div>
-      <Cart c={cart} p={totalPrice}/>
+      <Cart k={cartKeys} c={cart} p={totalPrice}/>
     </div>
   );
 }

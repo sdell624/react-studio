@@ -46,9 +46,12 @@ function App() {
       ))}
       </div>
       {/* <Cart k={cartKeys} c={cart} p={totalPrice}/> */}
+      <ul>
       {cartKeys.map((key) => {
-        <p>{cart[key]}x {key}</p>
+        <li>{cart[key]}x {key}</li>
       })}
+      </ul>
+      <p>Total Price: ${totalPrice}</p>
     </div>
   );
 }

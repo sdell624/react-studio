@@ -14,7 +14,7 @@ function App() {
   // TODO: use useState to create a state variable to hold the state of the cart
   /* add your cart state code here */
   const [cart, setCart] = useState({});
-  const [cartKeys, setCartKeys] = useState()
+  const [cartKeys, setCartKeys] = useState([])
   const [totalPrice, setTotalPrice] = useState(0);
   const incrementTotalPrice = (addition) => {
     // let newTotal = totalPrice + addition

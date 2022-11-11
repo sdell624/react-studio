@@ -38,28 +38,23 @@ function App() {
     incrementTotalPrice(cost);
   }
 
-  const [test, setTest] = useState([1,2,3]);
-
   return (
     <div className="App">
-
-      {test.map((val, i) => (
-        <Para x={val}/>
-      ))}
-
       <h1>Spenny D's Bakery</h1> {/* TODO: personalize your bakery (if you want) */}
-      <div className="MenuWrapper">
-        {bakeryData.map((item, index) => ( // TODO: map bakeryData to BakeryItem components
-          <BakerItem i={item} addToCart={updateCart}/>
-        ))}
+      <div className="content">
+        <div className="MenuWrapper">
+          {bakeryData.map((item, index) => ( // TODO: map bakeryData to BakeryItem components
+            <BakerItem i={item} addToCart={updateCart}/>
+          ))}
+        </div>
+        {/* <Cart k={cartKeys} c={cart} p={totalPrice}/> */}
+        <div className="Cart">
+          {Object.keys(cart).map((k, i) => (
+            <p key={i}>{cart[k]}x {k}</p>
+          ))}
+          <p>Total Price: ${totalPrice}</p>
+        </div>
       </div>
-      {/* <Cart k={cartKeys} c={cart} p={totalPrice}/> */}
-      <ul>
-        {Object.keys(cart).map((k, i) => (
-          <li key={i}>{cart[k]}x {k}</li>
-        ))}
-      </ul>
-      <p>Total Price: ${totalPrice}</p>
     </div>
   );
 }

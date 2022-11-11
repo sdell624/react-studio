@@ -45,7 +45,10 @@ function App() {
         <BakerItem i={item} addToCart={updateCart}/>
       ))}
       </div>
-      <Cart k={cartKeys} c={cart} p={totalPrice}/>
+      {/* <Cart k={cartKeys} c={cart} p={totalPrice}/> */}
+      {cartKeys.map((key) => {
+        <p>{cart[key]}x {key}</p>
+      })}
     </div>
   );
 }

@@ -47,9 +47,9 @@ function App() {
       </div>
       {/* <Cart k={cartKeys} c={cart} p={totalPrice}/> */}
       <ul>
-        {Object.keys(cart).map((key) => {
+        {Object.keys(cart).map((key, i) => {
           console.log("mapping");
-          <li>{cart[key]}x {key}</li>
+          <li key={i}>{cart[key]}x {key}</li>
         })}
       </ul>
       <p>Total Price: ${totalPrice}</p>
